@@ -44,7 +44,7 @@ var apiip = 'n/a';
 
 var jqxhr = $.ajax({
     dataType: "json",
-  url: 'http://api.restaurantreview.test/v1/restaurants',
+  url: 'http://localhost:81/v1/restaurants',
   })
   .done(function(data) {
       console.log(data);
@@ -84,7 +84,7 @@ $(document).on("click", "button.voteup" , function() {
 var jqxhr = $.ajax({
     dataType: "json",
     type: 'POST',
-    url: 'http://api.restaurantreview.test/v1/restaurant/upvote',
+    url: 'http://localhost:81/v1/restaurant/upvote',
     data: {restaurant_id: id},
   })
   .done(function(data) {
@@ -107,7 +107,7 @@ $(document).on("click", "button.votedown" , function() {
     var jqxhr = $.ajax({
     dataType: "json",
     type: 'POST',
-    url: 'http://api.restaurantreview.test/v1/restaurant/downvote',
+    url: 'http://localhost:81/v1/restaurant/downvote',
     data: {restaurant_id: id},
   })
   .done(function(data) {
