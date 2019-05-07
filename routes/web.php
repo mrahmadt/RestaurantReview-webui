@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-$router->get('/', function () use ($router) {
+$router->get('/version', function () use ($router) {
     return 'WEBUI ' . env('APP_VERSION');
 });
 
